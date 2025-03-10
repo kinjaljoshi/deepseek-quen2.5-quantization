@@ -1,4 +1,4 @@
-We evaluates the [**DeepSeek-R1-Distill-Qwen-14B**](https://huggingface.co/Qwen/Qwen2.5-14B) model across different precision levels **(FP32, FP16, 8-bit, 4-bit, GPTQ, AWQ, and offloaded)** by testing its performance on simple and complex tasks. 
+We will the [**DeepSeek-R1-Distill-Qwen-14B**](https://huggingface.co/Qwen/Qwen2.5-14B) model across different precision levels **(FP16, 8-bit, 4-bit, GPTQ, AWQ, and offloaded)** by testing its performance on simple and complex tasks. 
 
 * Simple tasks include fact questions, math problems, and science explanations
 * Complex tasks require multi-step reasoning such as classification, phishing detection, and fraud analysis. 
@@ -6,9 +6,6 @@ We evaluates the [**DeepSeek-R1-Distill-Qwen-14B**](https://huggingface.co/Qwen/
 The model is benchmarked using default generation settings, a **sampling strategy (temperature=0.6, top-p=0.95, 20 responses)**, and **beam search (beam sizes 2-5)**. 
 
 Inference time is measured for each configuration, and results are stored in a structured DataFrame for comparison. The final analysis provides insights into the trade-offs between speed, accuracy, and computational efficiency across various quantization methods and decoding strategies.
-
-**FP32 (Full Precision)**
-Uses 32-bit floating-point numbers, providing the highest accuracy but requiring high VRAM.
 
 **FP16 (Half Precision)**
 Uses 16-bit floating-point numbers, reducing memory consumption by 50% compared to FP32 while maintaining reasonable accuracy.
